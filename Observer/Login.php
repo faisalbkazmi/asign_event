@@ -24,8 +24,8 @@ class Login implements ObserverInterface
           $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
           $customer_data = $objectManager->create('Magento\Customer\Model\Customer')->load($id);
           $customer_email = $customer_data->getEmail();
-          $time=(new \DateTime())->format(\Magento\Framework\Stdlib\DateTime::DATETIME_PHP_FORMAT);
-          $test->saveData($id,$customer_email,$time);
+          $login_time=(new \DateTime())->format(\Magento\Framework\Stdlib\DateTime::DATETIME_PHP_FORMAT);
+          $test->saveData($id,$customer_email,$login_time);
 
         
     }

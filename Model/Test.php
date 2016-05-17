@@ -14,12 +14,12 @@ class Test extends \Magento\Framework\Model\AbstractModel implements TestInterfa
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
 
-    public function saveData($id,$customer_email,$time)
+    public function saveData($id,$customer_email,$login_time)
     {
 
     	$this->setCustomerId($id);
     	$this->setCustomerEmail($customer_email);
-    	$this->setTime($time);
+    	$this->setTime($login_time);
     	$this->save();
     }
 }
