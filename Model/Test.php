@@ -18,7 +18,7 @@ class Test extends \Magento\Framework\Model\AbstractModel implements TestInterfa
     {
 
     	$this->setCustomerId($id);
-    	$this->setEmail($customer_email);
+    	$this->setCustomerEmail($customer_email);
     	$this->setTime($time);
     	$this->save();
     }
