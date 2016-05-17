@@ -25,8 +25,7 @@ class Login implements ObserverInterface
           $customer=$this->_customerFactory->create();
           $event = $observer->getEvent();
           $id = $event->getCustomer()->getId();
-          $customerEmail = $customer->load($id);
-          $customer_email= $customerEmail->getEmail();  
+          $customer_email=$event->getCustomer()->getEmail();
           $login_time=(new \DateTime())->format(\Magento\Framework\Stdlib\DateTime::DATETIME_PHP_FORMAT);
           $test->saveData($id,$customer_email,$login_time);
 
